@@ -1,25 +1,23 @@
 <!DOCTYPE html>
-  <html lang="en">
-  <head>
-<!--==================== METADATOS ====================-->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="Clocks">
-    <meta name="keywords" content="HTML-CSS-JS">
-    <meta name="author" content="Rocio Cuello">
-    
-    <!--==================== CSS ====================-->
-    <link rel="stylesheet" href="assets/css/style.css">
+<html lang="es">
+<head>
+  <!--==================== METADATOS ====================-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Clocks">
+  <meta name="keywords" content="HTML-CSS-JS">
+  <meta name="author" content="Rocio Cuello">
 
-    <!--==================== TITULO ====================-->
-    <title> Clocks | Analog and Digital Clock</title>
+  <!--==================== CSS ====================-->
+  <link rel="stylesheet" href="assets/css/style.css">
 
-    <!--==================== ICONO DE PESTAÑA ====================-->
-    <link rel="icon" sizes="64x64" href="assets/img/favicon.webp"> 
+  <!--==================== TITULO ====================-->
+  <title> Clocks | Analog and Digital Clock</title>
 
-  </head>
-
+  <!--==================== ICONO DE PESTAÑA ====================-->
+  <link rel="icon" sizes="64x64" href="assets/img/favicon.webp"> 
+</head>
 <body>
   <div class="container">
     <div class="clock">
@@ -48,46 +46,46 @@
       <div id="ampm">AM</div>
   </div>
   </div>
-      <!--==================== script ====================-->
-      <script>
-      let hr = document.querySelector('#hr');
-      let mn = document.querySelector('#mn');
-      let sc = document.querySelector('#sc');
-  
-      setInterval(() => {
-        let day = new Date();
-        let hh=day.getHours() * 30;
-        let mm = day.getMinutes() * 6;
-        let ss = day.getSeconds() * 6;
-  
-        hr.style.transform = `rotateZ(${hh + (mm / 12)}deg)`;
-        mn.style.transform = `rotateZ(${mm}deg)`;
-        sc.style.transform = `rotateZ(${ss}deg)`;
-      })
-      let hours = document.getElementById('hours');
-      let minutes = document.getElementById('minutes');
-      let seconds = document.getElementById('seconds');
-      let ampm = document.getElementById('ampm');
-      setInterval(() => {
-        let h = new Date().getHours();
-        let m = new Date().getMinutes();
-        let s = new Date().getSeconds();
+  <!--==================== script ====================-->
+  <script>
+    let hr = document.querySelector('#hr');
+    let mn = document.querySelector('#mn');
+    let sc = document.querySelector('#sc');
 
-        let am = h >= 12 ? 'PM' : 'AM';
+    setInterval(() => {
+      let day = new Date();
+      let hh=day.getHours() * 30;
+      let mm = day.getMinutes() * 6;
+      let ss = day.getSeconds() * 6;
 
-        if (h > 12) {
-            h = h - 12;
-        } 
-
-        h = (h < 10) ? "0" + h : h;
-        m = (m < 10) ? "0" + m : m;
-        s = (s < 10) ? "0" + s : s;
-
-        hours.innerHTML = h;
-        minutes.innerHTML = m;
-        seconds.innerHTML = s;
-        ampm.innerHTML = am;
+      hr.style.transform = `rotateZ(${hh + (mm / 12)}deg)`;
+      mn.style.transform = `rotateZ(${mm}deg)`;
+      sc.style.transform = `rotateZ(${ss}deg)`;
     })
-     </script>
+    let hours = document.getElementById('hours');
+    let minutes = document.getElementById('minutes');
+    let seconds = document.getElementById('seconds');
+    let ampm = document.getElementById('ampm');
+    setInterval(() => {
+      let h = new Date().getHours();
+      let m = new Date().getMinutes();
+      let s = new Date().getSeconds();
+
+      let am = h >= 12 ? 'PM' : 'AM';
+
+      if (h > 12) {
+          h = h - 12;
+      } 
+
+      h = (h < 10) ? "0" + h : h;
+      m = (m < 10) ? "0" + m : m;
+      s = (s < 10) ? "0" + s : s;
+
+      hours.innerHTML = h;
+      minutes.innerHTML = m;
+      seconds.innerHTML = s;
+      ampm.innerHTML = am;
+    })
+  </script>
 </body>
 </html>

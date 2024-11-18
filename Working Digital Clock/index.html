@@ -1,58 +1,54 @@
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
+<html lang="es">
+<head>
   <!--==================== METADATOS ====================-->
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <meta name="description" content="Clocks">
-      <meta name="keywords" content="HTML-CSS-JS">
-      <meta name="author" content="Rocio Cuello">
-      
-      <!--==================== CSS ====================-->
-      <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Clocks">
+  <meta name="keywords" content="HTML-CSS-JS">
+  <meta name="author" content="Rocio Cuello">
 
-      <!--==================== TITULO ====================-->
-      <title> Clocks | Digital Clock</title>
+  <!--==================== CSS ====================-->
+  <link rel="stylesheet" href="assets/css/style.css">
 
-      <!--==================== ICONO DE PESTAÑA ====================-->
-      <link rel="icon" sizes="64x64" href="assets/img/favicon.webp"> 
+  <!--==================== TITULO ====================-->
+  <title>Clocks | Digital Clock</title>
 
-    </head>
-
-  <body>
-    
-    <div id="time">
-      <div class="circle" style="--clr:#ff2972;">
-        <div class="dots hr_dot"></div>
-        <svg>
-          <circle cx="70" cy="70" r="70"></circle>
-          <circle cx="70" cy="70" r="70" id="hh"></circle>
-        </svg>
-          <div id="hours">00</div>
-      </div>
-      <div class="circle"  style="--clr:#fee800;">
-        <div class="dots min_dot"></div>
-        <svg>
-          <circle cx="70" cy="70" r="70"></circle>
-          <circle cx="70" cy="70" r="70"  id="mm"></circle>
-        </svg>
-          <div id="minutes">00</div>
-      </div>
-      <div class="circle"  style="--clr:#04fc43;">
-        <div class="dots sec_dot"></div>
-        <svg>
-          <circle cx="70" cy="70" r="70"></circle>
-          <circle cx="70" cy="70" r="70"  id="ss"></circle>
-        </svg> 
-          <div id="seconds">00</div>
-      </div>
-      <div class="ap">
-          <div id="ampm">AM</div>
-      </div>
+  <!--==================== ICONO DE PESTAÑA ====================-->
+  <link rel="icon" sizes="64x64" href="assets/img/favicon.webp"> 
+</head>
+<body>
+  <div id="time">
+    <div class="circle" style="--clr:#ff2972;">
+      <div class="dots hr_dot"></div>
+      <svg>
+        <circle cx="70" cy="70" r="70"></circle>
+        <circle cx="70" cy="70" r="70" id="hh"></circle>
+      </svg>
+        <div id="hours">00</div>
+    </div>
+    <div class="circle"  style="--clr:#fee800;">
+      <div class="dots min_dot"></div>
+      <svg>
+        <circle cx="70" cy="70" r="70"></circle>
+        <circle cx="70" cy="70" r="70"  id="mm"></circle>
+      </svg>
+        <div id="minutes">00</div>
+    </div>
+    <div class="circle"  style="--clr:#04fc43;">
+      <div class="dots sec_dot"></div>
+      <svg>
+        <circle cx="70" cy="70" r="70"></circle>
+        <circle cx="70" cy="70" r="70"  id="ss"></circle>
+      </svg> 
+        <div id="seconds">00</div>
+    </div>
+    <div class="ap">
+        <div id="ampm">AM</div>
+    </div>
   </div>
-
-  <!--==================== script ====================-->
+  <!--==================== SCRIPT ====================-->
   <script>
       let hours = document.getElementById('hours');
       let minutes = document.getElementById('minutes');
@@ -67,7 +63,7 @@
       let min_dot = document.querySelector('.min_dot');
       let sec_dot = document.querySelector('.sec_dot');
 
-  
+
 
       setInterval(() => {
           let h = new Date().getHours();
@@ -96,9 +92,9 @@
           hr_dot.style.transform = `rotateZ(${h * 30}deg)`;
           min_dot.style.transform = `rotateZ(${m * 6}deg)`;
           sec_dot.style.transform = `rotateZ(${s * 6}deg)`;
-         
+          
       
-     })
+      })
   </script>
 </body>
 </html>

@@ -1,36 +1,34 @@
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
+<html lang="es">
+<head>
   <!--==================== METADATOS ====================-->
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <meta name="description" content="Clocks">
-      <meta name="keywords" content="HTML-CSS-JS-jQuery-Flipclock.js">
-      <meta name="author" content="Rocio Cuello">
-      
-      <!--==================== CSS ====================-->
-      <link rel="stylesheet" href="assets/css/style.css">
-      <link rel="stylesheet" href="assets/css/flipclock.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Clocks">
+  <meta name="keywords" content="HTML-CSS-JS-jQuery-Flipclock.js">
+  <meta name="author" content="Rocio Cuello">
+  
+  <!--==================== CSS ====================-->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/flipclock.css">
 
-      <!--==================== TITULO ====================-->
-      <title> Clocks | 3D Flip Clock</title>
+  <!--==================== TITULO ====================-->
+  <title> Clocks | 3D Flip Clock</title>
 
-      <!--==================== ICONO DE PESTAÑA ====================-->
-      <link rel="icon" sizes="64x64" href="assets/img/favicon.webp"> 
+  <!--==================== ICONO DE PESTAÑA ====================-->
+  <link rel="icon" sizes="64x64" href="assets/img/favicon.webp"> 
+</head>
+<body>
+  <div class="clock"></div>
+  <!--==================== SCRIPT ====================-->
+  <script src="https://code.jquery.com/jquery-3.4.1.js">
 
-    </head>
-
-  <body>
-    <div class="clock"></div>
-       <!--==================== script ====================-->
-      <script src="https://code.jquery.com/jquery-3.4.1.js">
-
-      </script><script src="assets/js/flipclock.js"></script>
-      <script>
-        var clock = $('.clock').FlipClock({
-          clockFace:'TwelveHourClock'
-        })
-      </script>
-    </body>
+  </script><script src="assets/js/flipclock.js"></script>
+  <script>
+    var clock = $('.clock').FlipClock({
+      clockFace:'TwelveHourClock'
+    })
+  </script>
+</body>
 </html>
