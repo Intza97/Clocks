@@ -17,6 +17,7 @@
 
   <!--==================== ICONO DE PESTAÑA ====================-->
   <link rel="icon" sizes="64x64" href="assets/img/favicon.webp"> 
+  <link rel="icon" sizes="64x64" href="assets/img/favicon.png"> 
 </head>
 <body>
   <section>
@@ -46,12 +47,10 @@
       if(h > 12) {
         h = h - 12;
         var am= 'PM';
-      }
-      
-      
-  h = (h < 10) ? "0" + h : h;
-  m = (m < 10) ? "0" + m : m;
-  s = (s < 10) ? "0" + s : s;
+      } 
+      h = (h < 10) ? "0" + h : h;
+      m = (m < 10) ? "0" + m : m;
+      s = (s < 10) ? "0" + s : s;
 
       hour.innerHTML = h;
       minute.innerHTML = m;
